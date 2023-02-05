@@ -1,6 +1,13 @@
-# Revert
-Given one or more existing commits, revert the changes that the related patches introduce, and record some new commits that record them. This requires your working tree to be clean (no modifications from the HEAD commit).
+# Commit
+Create a new commit containing the current contents of the index and the given log message describing the changes. The new commit is a direct child of HEAD, usually the tip of the current branch, and the branch is updated to point to it (unless no branch is associated with the working tree, in which case HEAD is "detached" as described in git-checkout[1]).
+
 ```
-git revert [--[no-]edit] [-n] [-m <parent-number>] [-s] [-S[<keyid>]] <commit>…​
-git revert (--continue | --skip | --abort | --quit)
+git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+	   [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+	   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+	   [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+	   [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+	   [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+	   [(--trailer <token>[(=|:)<value>])…​] [-S[<keyid>]]
+	   [--] [<pathspec>…​]
 ```
