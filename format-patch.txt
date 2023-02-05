@@ -1,0 +1,1 @@
+There are lines in current txt file(this is first one)
