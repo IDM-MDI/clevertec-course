@@ -1,5 +1,5 @@
-# Format-patch
-Prepare each non-merge commit with its "patch" in one "message" per commit, formatted to resemble a UNIX mailbox. The output of this command is convenient for e-mail submission or for use with git am.
+# Merge
+Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by git pull to incorporate changes from another repository and can be used by hand to merge changes from one branch into another.
 ```
 git format-patch [-k] [(-o|--output-directory) <dir> | --stdout]
 		   [--no-thread | --thread[=<style>]]
