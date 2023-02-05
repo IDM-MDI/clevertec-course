@@ -1,4 +1,3 @@
 This is first line of text
 Second line is fire!!
 Omg this is third line(rebased)
-

@@ -1,6 +1,7 @@
-# Rebase-interactive
---interactive
-
-Make a list of the commits which are about to be rebased. Let the user edit that list before rebasing. This mode can also be used to split commits (see SPLITTING COMMITS below).
-
-The commit list format can be changed by setting the configuration option rebase.instructionFormat. A customized instruction format will automatically have the long commit hash prepended to the format.
+# Cherry-pick
+Given one or more existing commits, apply the change each one introduces, recording a new commit for each. This requires your working tree to be clean (no modifications from the HEAD commit).
+```
+git cherry-pick [--edit] [-n] [-m <parent-number>] [-s] [-x] [--ff]
+		  [-S[<keyid>]] <commit>
+git cherry-pick (--continue | --skip | --abort | --quit)
+```
